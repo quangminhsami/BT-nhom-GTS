@@ -30,7 +30,10 @@ def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
 def normMatrix(matrix):
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
+    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
+    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
+    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
+    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
     if dominantMatrix(A) == 0:
         return normInf(matrix)
     if dominantMatrix(A) == 1:
@@ -191,22 +194,26 @@ def seidelLoop(A, D, eps):
 # =======================================================================
 # chương trình chính
 
-A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
+# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/.txt", dtype = float)
+# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
+# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
+A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
 b = np.array([1,2,3,4])
 
 if dominantMatrix(A) == -1:
     print("Ma trận A ko chéo trội")
+else:
 
-print("Nhập sai số epxilon: ")
-eps = float(input())
+    print("Nhập sai số epxilon: ")
+    eps = float(input())
 
-D = setBtoD(A, b)
+    D = setBtoD(A, b)
 
-if dominantMatrix(A) == 0:
-    print("A là ma trận chéo trội hàng")
-    seidelLoop(A, D, eps)
+    if dominantMatrix(A) == 0:
+        print("A là ma trận chéo trội hàng")
+        seidelLoop(A, D, eps)
 
-if dominantMatrix(A) == 1:
-    print("A là ma trận chéo trội cột")
-    seidelLoop(A, D, eps)
+    if dominantMatrix(A) == 1:
+        print("A là ma trận chéo trội cột")
+        seidelLoop(A, D, eps)
 

@@ -62,25 +62,29 @@ def cholesky_inverse(S):
 
 # =========================================================================
 # chương trình chính
-A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse.txt', dtype = float)
+A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse det equal 0.txt', dtype = float)
 print("A = \n", A)
 
-if isSymetric(A):
-    A1 = A 
-    print("A1 = \n", A1) 
+if np.linalg.det(A) != 0:
+
+    if isSymetric(A):
+        A1 = A 
+        print("A1 = \n", A1) 
+    else:
+        A1 = ATA(A)
+        print("A1 = \n", A1)
+
+    S = cholesky(A1)
+    print("S = \n", S)
+
+    S_1 = cholesky_inverse(S)
+    print("S* = \n", S_1)
+
+    A1_1 = S_1 @ S_1.T
+
+    print("Nghịch đảo của ma trận A là: \n", A1_1 @ A.T)
 else:
-    A1 = ATA(A)
-    print("A1 = \n", A1)
-
-S = cholesky(A1)
-print("S = \n", S)
-
-S_1 = cholesky_inverse(S)
-print("S* = \n", S_1)
-
-A1_1 = S_1 @ S_1.T
-
-print("Nghịch đảo của ma trận A là: \n", A1_1 @ A.T)
+    print("Ma trận ko khả nghịch")
 
 
 

@@ -73,7 +73,13 @@ def solve2(S,Y):
 
 # =========================================================================
 # chương trình chính
-A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Choleski/cholesky.txt', dtype = float)
+
+# Ma trận đối xứng:
+A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_doi_xung.txt', dtype = float)
+
+# Ma trận ko đối xứng:
+A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_ko_doi_xung.txt', dtype = float)
+
 b = np.array([9.45, -12.20, 7.78, -8.1, 10.0])
 
 if isSymetric(A):
