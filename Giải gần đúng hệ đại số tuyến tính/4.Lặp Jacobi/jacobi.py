@@ -28,6 +28,7 @@ def normInf(matrix):
 def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
+# gói tính chuẩn
 def normMatrix(matrix):
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
@@ -64,7 +65,7 @@ def get_d(A,b):
     return d
     
     
-
+# gói lặp jacobi TH chéo trội hàng
 def jacobiDominantRow(A,b,eps):
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
@@ -91,7 +92,7 @@ def jacobiDominantRow(A,b,eps):
             print(x1)
         print("so lan lap", i)    
 
-
+# gói lặp jacobi TH chéo trội cột
 def jacobiDominantCol(A,b,eps):
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
@@ -124,6 +125,7 @@ def jacobiDominantCol(A,b,eps):
 
 
 # main
+
 # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
 # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
 A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)

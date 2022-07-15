@@ -20,7 +20,6 @@ def dominantMatrix(matrix):
     
     return -1
 
-
 # Gói tính và trả về giá trị chuẩn vô cùng
 def normInf(matrix):
     return np.linalg.norm(matrix, np.inf)
@@ -29,6 +28,7 @@ def normInf(matrix):
 def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
+# gói tính chuẩn
 def normMatrix(matrix):
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
@@ -183,9 +183,7 @@ def seidelLoop(A, D, eps):
         X = C1 @ X + C2 @ X + D
         i += 1
         
-
-    print("Số lần lặp là: ", i)
-    print("Nghiệm của hệ PT là: ")
+    print("\nNghiệm của hệ PT là: ")
     print("X = ")
     print(X)
 
@@ -201,19 +199,18 @@ A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tí
 b = np.array([1,2,3,4])
 
 if dominantMatrix(A) == -1:
-    print("Ma trận A ko chéo trội")
+    print("Ma trận A ko chéo trội\n")
 else:
-
     print("Nhập sai số epxilon: ")
     eps = float(input())
 
     D = setBtoD(A, b)
 
     if dominantMatrix(A) == 0:
-        print("A là ma trận chéo trội hàng")
+        print("A là ma trận chéo trội hàng \n")
         seidelLoop(A, D, eps)
 
     if dominantMatrix(A) == 1:
-        print("A là ma trận chéo trội cột")
+        print("A là ma trận chéo trội cột \n")
         seidelLoop(A, D, eps)
 

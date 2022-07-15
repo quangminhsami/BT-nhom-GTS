@@ -1,9 +1,9 @@
 import numpy as np
 import sys
 
-b = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss_jordan_inverse_det_equal0.txt', dtype = float)
+b = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss jordan inverse.txt', dtype = float)
+# b = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss_jordan_inverse_det_equal0.txt', dtype = float)
 if np.linalg.det(b) != 0:
-
     n = b.shape[0]
 
     # tìm ma trận bổ sung 
@@ -17,7 +17,6 @@ if np.linalg.det(b) != 0:
     for i in range(n):        
         for j in range(n):
             a[i][j]=b[i][j]
-
 
     #Biến đổi Gauss Jordan
     print("Bien doi Gauss Jordan tim ma tran nghich dao: \n")

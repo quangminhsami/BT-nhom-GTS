@@ -10,6 +10,11 @@ def isSymetric(A):
                 return False
     return True
 
+# gói kiểm tra ma trận xác định dương
+def positive_definite_matrix(A):
+    if np.all(np.linalg.eigvals(A)) > 0:
+        return True
+
 # Gói nhân AT với A 
 def ATA(A):
     A1 = A.T @ A
@@ -78,23 +83,23 @@ def solve2(S,Y):
 A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_doi_xung.txt', dtype = float)
 
 # Ma trận ko đối xứng:
-A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_ko_doi_xung.txt', dtype = float)
+# A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_ko_doi_xung.txt', dtype = float)
 
 b = np.array([9.45, -12.20, 7.78, -8.1, 10.0])
 
-if isSymetric(A):
+if isSymetric(A) and positive_definite_matrix(A):
     A1 = A 
-    print("A1 = ", A1)
+    print("A1 = \n", A1)
     B1 = b
     print("B1 = ", B1)   
 else:
     A1 = ATA(A)
-    print("A1 = ", A1)
+    print("A1 = \n", A1)
     B1 = ATb(A,b)
     print("B1 = ", B1)   
 
 S = cholesky(A1)
-print("S = ", S)
+print("S = \n", S)
 
 Y = solve1(S, B1)
 print("Y = ", Y)
@@ -102,6 +107,8 @@ print("Y = ", Y)
 X = solve2(S,Y)
 print("Nghiệm của hệ PT là: ")
 print("X = ", X)
+
+
 
 # nghiệm theo numpy
 # print("Nghiệm theo numpy:")

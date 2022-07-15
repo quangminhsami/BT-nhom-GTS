@@ -10,6 +10,11 @@ def isSymetric(A):
                 return False
     return True
 
+# gói kiểm tra ma trận xác định dương
+def positive_definite_matrix(A):
+    if np.all(np.linalg.eigvals(A)) > 0:
+        return True
+
 # Gói nhân AT với A 
 def ATA(A):
     A1 = A.T @ A
@@ -62,12 +67,13 @@ def cholesky_inverse(S):
 
 # =========================================================================
 # chương trình chính
-A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse det equal 0.txt', dtype = float)
+A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse.txt', dtype = float)
+# A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse det equal 0.txt', dtype = float)
 print("A = \n", A)
 
 if np.linalg.det(A) != 0:
 
-    if isSymetric(A):
+    if isSymetric(A) and positive_definite_matrix(A):
         A1 = A 
         print("A1 = \n", A1) 
     else:
