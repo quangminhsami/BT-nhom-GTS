@@ -6,13 +6,13 @@ print("=========================================")
 # Nhập ma trận bổ sung/ liên kết a   
  
 # TH có nghiệm duy nhát
-# a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan.txt', dtype = float)
+# a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan.txt', dtype = float)
 
 # TH vo so nghiem
-# a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan_vo_so_nghiem.txt', dtype = float)
+# a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan_vo_so_nghiem.txt', dtype = float)
 
 # TH vô nghiệm
-a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan_vo_nghiem.txt', dtype = float)
+a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/2.Gauss Jordan/gauss_jordan_vo_nghiem.txt', dtype = float)
 
 # Hạng của ma trận a
 rank_a = np.linalg.matrix_rank(a)

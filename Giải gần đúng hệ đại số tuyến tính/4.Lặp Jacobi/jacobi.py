@@ -39,10 +39,10 @@ def normMatrix(matrix):
         return 0 
 
 def getMatrix():
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
+    A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
     return A
 
 def get_B1(A):
@@ -71,7 +71,6 @@ def get_d(A,b):
     d = np.dot(T, b)
     
     return d
-    
     
 # gói lặp jacobi TH chéo trội hàng
 def jacobiDominantRow(A,b,eps):
@@ -126,7 +125,7 @@ def jacobiDominantCol(A,b,eps):
 
 
 # main
-
+# ================================================================================
 A = getMatrix()
 print("A = \n", A)
 

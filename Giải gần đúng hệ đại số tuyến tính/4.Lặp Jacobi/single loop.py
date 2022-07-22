@@ -29,7 +29,7 @@ def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
 def normMatrix(matrix):
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
+    A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
     if dominantMatrix(A) == 0:
         return normInf(matrix)
     if dominantMatrix(A) == 1:
@@ -100,15 +100,11 @@ def singleLoop(B,d,eps):
     print("X = ")
     
     return X_k
-    
-
-
-
 
 # =========================================================================
 # chương trình chính
 
-A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/single loop.txt", dtype = float)
+A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/single loop.txt", dtype = float)
 b = np.array([1,2,3,4])
 
 if dominantMatrix(A) == -1:

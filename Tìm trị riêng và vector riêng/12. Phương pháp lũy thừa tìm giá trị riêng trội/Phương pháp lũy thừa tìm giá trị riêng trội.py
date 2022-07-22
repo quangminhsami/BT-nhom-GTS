@@ -4,10 +4,10 @@ import  math
 import sys
 
 # Load file
-# f = open("B:/BT nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội thực, đơn.txt", "r")
-# f = open("B:/BT nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội thực, bội.txt", "r")
-# f = open("B:/BT nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội đối nhau.txt", "r")
-f = open("B:/BT nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng phức.txt", "r")
+# f = open("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội thực, đơn.txt", "r")
+# f = open("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội thực, bội.txt", "r")
+# f = open("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng trội đối nhau.txt", "r")
+f = open("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/12. Phương pháp lũy thừa tìm giá trị riêng trội/trị riêng phức.txt", "r")
 a = f.readline()
 n =  int(a)
 
@@ -142,5 +142,4 @@ for i in range(n):
             print('Vector riêng tương ứng là: ')
             print(VTR_1)
             break
-            print('*' * 100)
         break

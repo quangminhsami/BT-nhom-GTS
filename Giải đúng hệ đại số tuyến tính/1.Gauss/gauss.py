@@ -6,13 +6,13 @@ print("=========================================")
 # Nhập ma trận bổ sung/ liên kết a 
 
 # TH có nghiệm duy nhất
-# a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss.txt', dtype = float)
+a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss.txt', dtype = float)
 
 # TH vô số nghiệm
-# a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss_vo_so_nghiem.txt', dtype = float)
+# a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss_vo_so_nghiem.txt', dtype = float)
 
 # TH vô nghiệm
-a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss_vo_nghiem.txt', dtype = float)
+# a = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/1.Gauss/gauss_vo_nghiem.txt', dtype = float)
 
 # Hạng của ma trận a
 rank_a = np.linalg.matrix_rank(a)
@@ -45,7 +45,7 @@ def gauss():
             ratio = a[j][i] / a[i][i]
          
             for k in range(n+1):
-             a[j][k] = a[j][k] - ratio * a[i][k]
+                a[j][k] = a[j][k] - ratio * a[i][k]
         print("Lan ", i+1)
         print(a,"\n")
     print("Vay ta thu duoc ma tran \n",a)

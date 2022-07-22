@@ -80,11 +80,11 @@ def solve2(S,Y):
 # chương trình chính
 
 # Ma trận đối xứng:
-# A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_doi_xung.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_doi_xung.txt', dtype = float)
 
 
 # Ma trận ko đối xứng:
-A = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_ko_doi_xung.txt', dtype = float)
+A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải đúng hệ đại số tuyến tính/3.Cholesky/cholesky_ko_doi_xung.txt', dtype = float)
 print("A = \n", A)
 
 b = np.array([9.45, -12.20, 7.78, -8.1, 10.0])

@@ -77,9 +77,9 @@ eps = float(input("Nhập sai số eps: "));
 
 # nhập ma trận A từ file
 
-# A = np.loadtxt('B:/BT nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/newton_inverse.txt', dtype = float)
-# A = np.loadtxt('B:/BT nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/cau 2(2018.2).txt', dtype = float)
-A = np.loadtxt('B:/BT nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/matrix det get equal 0.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/newton_inverse.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/cau 2(2018.2).txt', dtype = float)
+A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/matrix det get equal 0.txt', dtype = float)
 
 n,_ = np.shape(A)
 
@@ -96,6 +96,6 @@ uu = newton_matrix_inversion(A, n, eps);
 print("--------------------------------------------------------------------")
 B = uu.improved_newton()
 # lưu ma trận nghịch đảo vào file
-np.savetxt('B:/BT nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/inverse_matrix_A.txt', B, delimiter = ' ')
-# np.savetxt('B:/BT nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/dap an cau 2(2018.2).txt', B, delimiter = ' ')
+np.savetxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/inverse_matrix_A.txt', B, delimiter = ' ')
+# np.savetxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính gần đúng ma trận nghịch đảo/10.Lặp Newton/dap an cau 2(2018.2).txt', B, delimiter = ' ')
     

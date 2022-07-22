@@ -67,8 +67,8 @@ def cholesky_inverse(S):
 
 # =========================================================================
 # chương trình chính
-# A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse.txt', dtype = float)
-A = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse det equal 0.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse.txt', dtype = float)
+A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính đúng ma trận nghịch đảo/7.Choleski/cholesky inverse det equal 0.txt', dtype = float)
 print("A = \n", A)
 
 if np.linalg.det(A) != 0:

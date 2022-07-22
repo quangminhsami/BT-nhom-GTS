@@ -136,8 +136,8 @@ def findValue(A):
     return sorted(eigenValues)
 	
 # A = np.array([[1, 2, 3, 4], [2, 1, 2, 3], [3, 2, 1, 2], [4, 3, 2, 1]])
-# A = np.loadtxt('B:/BT nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH1.txt', dtype = float)
-# A = np.loadtxt('B:/BT nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH2.txt', dtype = float)
-A = np.loadtxt('B:/BT nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH3.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH1.txt', dtype = float)
+# A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH2.txt', dtype = float)
+A = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tìm trị riêng và vector riêng/11.Danielevsky/TH3.txt', dtype = float)
 print("Ma trận A : \n", A)
 eigenvalue, eigenvector = Danilevski(A)

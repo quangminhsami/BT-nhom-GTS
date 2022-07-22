@@ -2,8 +2,8 @@ import numpy as np
 import sys
 
 # nhập ma trận b
-# b = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss jordan inverse.txt', dtype = float)
-b = np.loadtxt('B:/BT nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss_jordan_inverse_det_equal0.txt', dtype = float)
+b = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss jordan inverse.txt', dtype = float)
+#b = np.loadtxt('B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Tính đúng ma trận nghịch đảo/6.Gauss Jordan/gauss_jordan_inverse_det_equal0.txt', dtype = float)
 
 # Kiểm tra điều kiện ma trận khả nghịch
 if np.linalg.det(b) != 0:

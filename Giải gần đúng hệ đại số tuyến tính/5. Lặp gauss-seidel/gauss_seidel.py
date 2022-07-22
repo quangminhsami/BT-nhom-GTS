@@ -29,10 +29,10 @@ def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
 def getMatrix():
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
+    # A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
+    A = np.loadtxt("B:/Nguyễn Quang Minh - Lớp 133584 - Bài tập nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
     return A
 
 # gói tính chuẩn
