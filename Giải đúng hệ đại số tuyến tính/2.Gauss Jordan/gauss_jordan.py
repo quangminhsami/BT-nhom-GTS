@@ -18,7 +18,7 @@ a = np.loadtxt('B:/BT nhóm GTS/Giải đúng hệ đại số tuyến tính/2.G
 rank_a = np.linalg.matrix_rank(a)
             
 print("1.INPUT: \n")
-print(a)
+print("Ma trận a: \n", a)
 
 n = a.shape[0]
 

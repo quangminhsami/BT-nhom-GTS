@@ -30,10 +30,7 @@ def norm1(matrix):
 
 # gói tính chuẩn
 def normMatrix(matrix):
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+    getMatrix()
     if dominantMatrix(A) == 0:
         return normInf(matrix)
     elif dominantMatrix(A) == 1:
@@ -41,24 +38,35 @@ def normMatrix(matrix):
     else:
         return 0 
 
-def get_B(A):
+def getMatrix():
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
     A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+    return A
+
+def get_B1(A):
+    getMatrix()
     n = A.shape[0]
     I = np.identity(n) 
     T = np.linalg.inv(np.diag(np.diag(A)))
-    B = I - np.dot(T, A)
+    B1 = I - np.dot(T, A)
     
-    return B
+    return B1
+
+def get_B2(A):
+    getMatrix()
+    n = A.shape[0]
+    I = np.identity(n) 
+    T = np.linalg.inv(np.diag(np.diag(A)))
+    B2 = I - np.dot(A, T)
+    
+    return B2
 
 def get_d(A,b):
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+    getMatrix()
     b = np.array([1,2,3,4,5,6], dtype = float)
+    # b = np.array([1,2,3,4], dtype = float)
     T = np.linalg.inv(np.diag(np.diag(A)))
     d = np.dot(T, b)
     
@@ -67,12 +75,9 @@ def get_d(A,b):
     
 # gói lặp jacobi TH chéo trội hàng
 def jacobiDominantRow(A,b,eps):
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+    getMatrix()
     
-    B = get_B(A)
+    B = get_B1(A)
     d = get_d(A,b)
     
     norm_inf = normMatrix(B)
@@ -94,12 +99,8 @@ def jacobiDominantRow(A,b,eps):
 
 # gói lặp jacobi TH chéo trội cột
 def jacobiDominantCol(A,b,eps):
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-    A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-    # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
-    
-    B = get_B(A)
+    getMatrix()
+    B = get_B2(A)
     d = get_d(A,b)
     norm_1 = normMatrix(B)
     print("q = ", norm_1)
@@ -126,11 +127,11 @@ def jacobiDominantCol(A,b,eps):
 
 # main
 
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi.txt", dtype = float)
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_hang.txt", dtype = float)
-A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_cheo_troi_cot.txt", dtype = float)
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/4.Lặp Jacobi/jacobi_ko_cheo_troi.txt", dtype = float)
+A = getMatrix()
+print("A = \n", A)
+
 b = np.array([1,2,3,4,5,6], dtype = float)
+# b = np.array([1,2,3,4], dtype = float)
 
 if dominantMatrix(A) == -1:
     print("Ma trận A ko chéo trội")

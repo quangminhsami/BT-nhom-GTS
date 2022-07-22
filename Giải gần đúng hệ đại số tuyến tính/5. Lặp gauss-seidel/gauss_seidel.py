@@ -28,12 +28,16 @@ def normInf(matrix):
 def norm1(matrix):
     return np.linalg.norm(matrix, 1)
 
-# gói tính chuẩn
-def normMatrix(matrix):
+def getMatrix():
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
     # A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
     A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
+    return A
+
+# gói tính chuẩn
+def normMatrix(matrix):
+    A = getMatrix()
     if dominantMatrix(A) == 0:
         return normInf(matrix)
     if dominantMatrix(A) == 1:
@@ -108,6 +112,7 @@ def getqCoeff(A, C):
             b[i] = 1 - sum 
             if a[i] / b[i] > q:
                 q = a[i] / b[i]
+    print(q)
 
     if dominantMatrix(A) == 1:
         for i in range(n):
@@ -121,6 +126,7 @@ def getqCoeff(A, C):
             b[i] = 1 - sum 
             if a[i] / b[i] > q:
                 q = a[i] / b[i]
+    print(q)
     
     return q 
 
@@ -192,12 +198,11 @@ def seidelLoop(A, D, eps):
 # =======================================================================
 # chương trình chính
 
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/.txt", dtype = float)
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_hang.txt", dtype = float)
-# A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_ko_cheo_troi.txt", dtype = float)
-A = np.loadtxt("B:/BT nhóm GTS/Giải gần đúng hệ đại số tuyến tính/5. Lặp gauss-seidel/gauss_seidel_cheo_troi_cot.txt", dtype = float)
-b = np.array([1,2,3,4])
+A = getMatrix()
+print("A = \n", A)
 
+# b = np.array([1,2,3,4])
+b = np.array([1,2,3,4,5,6])
 if dominantMatrix(A) == -1:
     print("Ma trận A ko chéo trội\n")
 else:
